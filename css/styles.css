@@ -79,13 +79,14 @@ Media queries
     .hamburger.clicked ~ .menu {
     display: flex;
     flex-direction: column;
+    text-align: left;
     align-items: flex-end;
     background-color: #ffffff;
     width: 25%;
-    padding-top: 40px;
+    padding-top: 20px;
     position: absolute;
     top: 50px;
-    right: 0px;
+    right: -90px;
     }
   
     .menu a {
