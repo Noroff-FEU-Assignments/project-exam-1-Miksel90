@@ -38,7 +38,16 @@ a {
   
   .menu {
     display: flex;
-    margin-right: 10px;
+    margin-right: 100px;
+    font-size: 20px;
+  }
+  
+  .menu a {
+    margin-left: 30px; /* Add desired spacing between items */
+  }
+  
+  .menu a:first-child {
+    margin-left: 0; /* Remove left margin from first item */
   }
   
   .nav-right {
@@ -46,15 +55,6 @@ a {
     justify-content: flex-end;
     align-items: center;
   }
-
-  .nav-right a {
-    margin-left: 10px; /* Add desired spacing between items */
-  }
-  
-  .nav-right a:first-child {
-    margin-left: 0; /* Remove left margin from first item */
-  }
-
   /*==============
 Media queries
 ================*/
