@@ -7,6 +7,10 @@ body, html {
     padding: 0;
   }
 
+  .h2{
+    color: black;
+    font-size: 300px;
+  }
 
 a {
     color: black;
@@ -29,7 +33,8 @@ a {
   .title {
     color: black;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 40px;
+    margin-left: 40px;
   }
   
   .hamburger {
@@ -39,11 +44,11 @@ a {
   .menu {
     display: flex;
     margin-right: 100px;
-    font-size: 20px;
+    font-size: 30px;
   }
   
   .menu a {
-    margin-left: 30px; /* Add desired spacing between items */
+    margin-left: 30px; 
   }
   
   .menu a:first-child {
