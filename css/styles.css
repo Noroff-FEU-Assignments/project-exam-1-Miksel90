@@ -38,6 +38,7 @@ a {
   
   .menu {
     display: flex;
+    margin-right: 10px;
   }
   
   .nav-right {
@@ -46,7 +47,13 @@ a {
     align-items: center;
   }
 
-
+  .nav-right a {
+    margin-left: 10px; /* Add desired spacing between items */
+  }
+  
+  .nav-right a:first-child {
+    margin-left: 0; /* Remove left margin from first item */
+  }
 
   /*==============
 Media queries
