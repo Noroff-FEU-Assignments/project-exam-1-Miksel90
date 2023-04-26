@@ -7,9 +7,10 @@ body, html {
     padding: 0;
   }
 
-  .h2{
+  h2{
     color: black;
-    font-size: 300px;
+    font-size: 40px;
+   text-align: center;
   }
 
 a {
@@ -73,28 +74,39 @@ a {
 
   .index-text{
     position: absolute;
-    top: 0px;
+    background: rgb(0,0,0,0.5);
+    top: 20px;
     right: 150px; 
+    color: #fff; 
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 75px;
+  }
+
+
+  .tip-button{
+    position: absolute;
+    bottom: 100px;
+    right: 300px; 
     color: #fff; 
     padding: 30px;
     border-radius: 10px;
-    font-size: 50px;
+    border-style: solid;
+    border-color: #fff;
   }
 
-
-  .index-text a{
-    background: #427784;
+  .tip-button a{
     color:#ffffff;
-    font-size: 25px;
+    font-size: 40px;
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
-    display: inline-block
+    display: inline-block;
   }
 
-  .index-text a:hover{
+  .tip-button a:hover{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 50px;
     border-radius: 5px;
     transition: 0.9s;
   }
