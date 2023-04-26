@@ -60,7 +60,38 @@ a {
     justify-content: flex-end;
     align-items: center;
   }
+
+
+  .top-image{
+    background-image: url(../images/top-index.jpg);
+    height: 570px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .index-text{}
+
+
+  .index-text a{
+
+  }
   /*==============
+Index page
+================
+
+
+.top-image{
+<div class="index-text">
+
+
+
+
+
+
+
+/*==============
 Media queries
 ================*/
   
