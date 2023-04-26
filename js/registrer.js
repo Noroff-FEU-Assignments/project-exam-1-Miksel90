@@ -4,8 +4,6 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const button = document.querySelector("sub-button");
 
-
-
 // Function for the disabled button//
 function isButtonDisabled() {
     // validate the input data
@@ -20,20 +18,20 @@ function isButtonDisabled() {
 function submitForm(event) {
     event.preventDefault();
 
-// checking the input or an error message will show
+    // checking the input or an error message will show
     if (validateEmail(email.value) === true) {
         emailError.style.display = "none";
+        // Update button text 
+        button.innerHTML = "Awesome Work";
     } else {
         emailError.style.display = "block";
     }
-    console.log("U are the best")
 }
 
+form.addEventListener("submit", submitForm);
+email.addEventListener("keyup", isButtonDisabled);
 
-    form.addEventListener("submit", submitForm);
-    email.addEventListener("keyup", isButtonDisabled);
-
-    //check if its a valid email
+// check if it's a valid email
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);
