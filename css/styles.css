@@ -21,6 +21,12 @@ a {
     /*==============
 2. Navigation
 ================*/
+
+header{
+  position: sticky; 
+  z-index: 99;
+  top: 0;
+}
   
   .topnav {
     background-color: #ffffff;
@@ -116,19 +122,33 @@ Index page
 
   /*==============
 subscribe section
-================*/
+================*/  
 
 .subscribe {
- background-image:url(../images/subscribe.jpg);
+ background-image:url(../images/subsribe-2.webp);
  height: 600px;
  background-size: cover;
-
+ background-repeat: no-repeat;
+ background-position:center -200px;
  margin-bottom: 5px;
  position: relative;
 }
 
-.offertext{
+.subscribe-text{
   font-size: 16px;
+  position: absolute;
+  top: 50px;
+  right: 200px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.sub-label{
+  position: absolute;
+  right: 200px;
+  top: 100px;
+  font-size: 25px;
+  color: #fff;
 }
 
 form {
@@ -136,13 +156,12 @@ form {
   max-width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
-
 }
 
 input {
-  border-color: #427784;
+  border-color: #B3C99C;
   border-style: groove;
-  width: 300px;
+  width: 400px;
   max-width: 100%;
   margin-top: 2px;
   padding: 10px;
@@ -157,7 +176,7 @@ input {
 }
 
 .sub-button {
-  background: green;
+  background: #B3C99C;
   width: 200px;
   height: 80px;
   color: white;
@@ -168,7 +187,14 @@ input {
   border-radius: 0.2rem;
 } 
 
+  /*==============
+footer
+================*/ 
 
+.bot-nav{
+  height: 1000px;
+  color: #427784;
+}
 /*==============
 Media queries
 ================*/
