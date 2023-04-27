@@ -1,4 +1,4 @@
-// Select all slides
+/* // Select all slides
 const slides = document.querySelectorAll(".slide");
 
 // loop through slides and set each slides translateX property to index * 100% 
@@ -61,4 +61,4 @@ prevSlide.addEventListener("click", function () {
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
-});
+}); */
