@@ -17,7 +17,7 @@ async function getLatestPost() {
 }
 // Create HTML
 function createPostHTML(latestPost) {
-    const container = document.querySelector(".slide");
+    const container = document.querySelector(".latest-container");
 
     const productContainer = document.createElement("a");
     productContainer.href = "blog-specific.html?id=" + latestPost.id;
