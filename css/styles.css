@@ -112,15 +112,14 @@ Index page
 
   .index-text{
     position: absolute;
-    background: rgb(0,0,0,0.5);
-    top: 20px;
+    top: 100px;
     right: 150px; 
     color: #fff; 
     padding: 10px;
     border-radius: 10px;
-    font-size: 75px;
+    font-size: 50px;
+    font-weight: bold;
   }
-
 
   .tip-button{
     position: absolute;
@@ -326,6 +325,18 @@ footer
   margin-bottom: 20px;
   margin-top: 5px;
 }
+
+    /*==============
+bolgs.html
+================*/
+
+
+.blogs{
+  background-image: url(../images/put-3.jpg);
+  height: 400px;
+}
+
+
 
     /*==============
 5. Icons
