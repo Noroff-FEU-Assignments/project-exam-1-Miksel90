@@ -8,12 +8,12 @@ const fullPostURL = apiBase + jsonBase + postEndpoint;
 
 // Fetching the products
 async function getLatestPost() {
-  const response = await fetch(fullPostURL + "?_embed" );
+  const response = await fetch(fullPostURL);
 
   const latestPosts = await response.json();
 
-  return latestPosts;
-//   console.log(latestPosts);
+ return latestPosts;
+// console.log(latestPosts);
 }
 // Create HTML
 function createPostHTML(latestPost) {
@@ -28,17 +28,17 @@ function createPostHTML(latestPost) {
     title.innerText = latestPost.title.rendered;
     productContainer.append(title);
 
-    const featuredImage = latestPost._embedded["wp:featuredmedia"][0];
-    if (featuredImage) {
-      const image = document.createElement("img");
-      image.src = featuredImage.source_url;
-      productContainer.append(image);
-    }
+    // const featuredImage = latestPost._embedded["wp:featuredmedia"][0];
+    // if (featuredImage) {
+    //   const image = document.createElement("img");
+    //   image.src = featuredImage.source_url;
+    //   productContainer.append(image);
+    // }
 
-    const quote = document.createElement("h5")
+   /*  const quote = document.createElement("h5")
     quote.innerText = latestPost.content.rendered;
     productContainer.append(quote);
-
+ */
     
   container.append(productContainer);
 }
