@@ -56,47 +56,47 @@ header{
   z-index: 99;
   top: 0;
 }
-  
-  .topnav {
-    background-color: #ffffff;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .title {
-    color: black;
-    text-decoration: none;
-    font-size: 40px;
-    margin-left: 40px;
-  }
-  
-  .hamburger {
-    display: none;
-  }
-  
-  .menu {
-    display: flex;
-    margin-right: 100px;
-    font-size: 30px;
-    color: black;
-  }
-  
-  .menu a {
-    margin-left: 30px; 
-  }
-  
-  .menu a:first-child {
-    margin-left: 0; /* Remove left margin from first item */
-  }
-  
-  .nav-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+
+.topnav {
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.title {
+  color: black;
+  text-decoration: none;
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  margin-right: 100px;
+  font-size: 30px;
+}
+
+.menu a {
+  margin-left: 30px;
+  color: black; 
+}
+
+.menu a:first-child {
+  margin-left: 0; /* Remove left margin from first item */
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
   /*==============
 Index page
@@ -354,18 +354,23 @@ footer
 /*==============
 Media queries
 ================*/
+
+@media screen and (max-width: 470px) {
+  .tip-button a {
+    font-size: 12px;
+  }
+  .index-text{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 550px){
+.footer {
+    margin-top: -160px;
+}
+}
   
   @media (max-width: 600px) {
-    .hamburger {
-      display: block;
-      cursor: pointer;
-      color: rgb(0, 0, 0);
-      font-size: 18px;
-      padding: 14px 16px;
-      background-color: #ffffff;
-      border: none;
-      order: 3;
-    }
 
     .subscribe-text{
       top:10px;
@@ -376,52 +381,14 @@ Media queries
       height: 40px;
       font-size: 15px;
   }
-    }
-  
-    .form, input[type=textarea] {
-      width: 100%;
-      margin-top: 0;
-    }
-  
-    .menu {
-      display: none;
-    }
-  
-    .hamburger.clicked ~ .menu {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-end;
-    background-color: #ffffff;
-    width: 25%;
-    padding-top: 20px;
-    position: absolute;
-    top: 50px;
-    right: -90px;
-    }
-  
-    .menu a {
-      padding: 8px 16px;
-      font-size: 18px;
-      text-align: right;
-   
-    }
 
-@media screen and (max-width: 470px) {
-  .tip-button a {
-    font-size: 12px;
+  .form, input[type=textarea] {
+    width: 100%;
+    margin-top: 0;
   }
-  .index-text{
-    font-size: 25px;
-  }
+    }
   
-}
 
-@media screen and (max-width: 550px){
-.footer {
-    margin-top: -160px;
-}
-}
 
 @media screen and (max-width: 756px) {
     .nav-right {
@@ -445,5 +412,37 @@ Media queries
     }
     .footer{
       margin-top: -90px;
+    }
+    .menu {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      font-size: 18px;
+      padding: 14px 16px;
+      background-color: #ffffff;
+      border: none;
+      order: 3;
+    }
+    .hamburger.clicked ~ .menu {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-end;
+    background-color: #ffffff;
+    width: 25%;
+    padding-top: 20px;
+    position: absolute;
+    top: 50px;
+    right: -90px;
+    }
+  
+    .menu a {
+      padding: 8px 16px;
+      font-size: 18px;
+      text-align: right;
+   
     }
   }
