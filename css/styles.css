@@ -153,59 +153,81 @@ Index page
 Carousel
 =============*/
 
-/*
-.btn-slide{
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  z-index: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
-}
-
-.btn-slide:active {
-  transform: scale(1.1);
-}
-
-.btn-prev {
-  top: 45%;
-  left: 2%;
-}
-
-.btn-next {
-  top: 45%;
-  right: 2%;
-}  
- */
 
 .latest-wrapper {
   background: #B3C99C;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-  margin: 0 auto;
+  display: grid;
 }
 
 .latest-container{
-  width: 100%;
-  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  gap: 1rem;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 .posts{
   font-size: 20px;
   flex-basis: calc(25% - 20px);
-  margin: 10px;
+  padding: 5px;
+  border-style: groove;
+  border-color:black;
+  transition: transform 0.5s ease-in-out;
 }
 
 .posts img{
-  width: 200px;
+  width: 70%;
+  height: 200px;
+  flex-shrink: 0;
   object-fit: cover;
+}
+
+.carousel-nav {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; 
+  margin-top: 1rem;
+}
+
+.carousel-nav button {
+  padding: 0.5rem 1rem;
+  font-size: 3rem;
+  background-color: #B3C99C;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  /* transform: translateY(-50%); */
+}
+
+.carousel-nav button:hover {
+  background-color: #8CAE77;
+}
+
+/* .carousel-nav .prev:first-child {
+  display: none;
+}
+
+.carousel-nav .next:last-child {
+  display: none;
+} */
+
+
+  /*==============
+Specific page
+================*/  
+
+.wp-block-quote{
+  font-size: 18px;
+  font-style: italic;
+}
+
+.wp-block-image{
+  width: 70%;
+  height: 200px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
   /*==============
 subscribe section

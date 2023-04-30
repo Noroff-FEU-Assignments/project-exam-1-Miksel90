@@ -46,36 +46,14 @@ function createPostsHTML(latestPosts) {
     createPostHTML(latestPost);
   }
 
-  // Add click event listeners to the prev/next buttons
-  const container = document.querySelector(".latest-container");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-  const posts = document.querySelectorAll(".posts");
+  container.append(productContainer);
+}
 
-  let currentIndex = 0;
-  let scrollAmount = 0;
-  const scrollSize = posts[0].offsetWidth * 4 + 80; // 80px for the gap between groups of 4 posts
-
-  // Move to the previous set of posts
-  const prev = () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      scrollAmount += scrollSize;
-      container.style.transform = `translateX(-${scrollAmount}px)`;
+function createPostsHTML(latestPosts) {
+    for (let i = 0; i < latestPosts.length; i++) {
+      const latestPost = latestPosts[i];
+      createPostHTML(latestPost);
     }
-  };
-
-  // Move to the next set of posts
-  const next = () => {
-    if (currentIndex < Math.ceil(posts.length / 4) - 1) {
-      currentIndex++;
-      scrollAmount -= scrollSize;
-      container.style.transform = `translateX(-${scrollAmount}px)`;
-    }
-  };
-
-  prevBtn.addEventListener("click", prev);
-  nextBtn.addEventListener("click", next);
 }
 
 // Create the main function
@@ -86,4 +64,3 @@ async function main() {
 
 // Run the entire function
 main();
-
