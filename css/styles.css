@@ -17,11 +17,19 @@
   box-sizing: border-box;
 }
 
+/* figure{
+display: flex;
+} */
 
-  h2{
-    color: black;
-    font-size: 40px;
-    text-align: center;
+
+h2{
+  color: black;
+  font-size: 40px;
+  text-align: center;
+}
+
+  h4{
+    margin-bottom: 3px;
   }
 
 a {
@@ -36,6 +44,7 @@ html, body {
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
+  font-size: 25px;
   color: black;
   display: flex;
   height: fit-content;
@@ -182,10 +191,12 @@ Carousel
   font-size: 20px;
   flex-basis: calc(25% - 20px);
   padding: 5px;
+  margin: 10px;
   border-style: groove;
   border-color:black;
   transition: transform 0.5s ease-in-out;
 }
+
 
 .posts img{
   width: 70%;
@@ -229,17 +240,79 @@ Carousel
 Specific page
 ================*/  
 
-.wp-block-quote{
-  font-size: 18px;
+.specific-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.post-specific{
+  flex-basis: calc(100%);
+  max-width: 1000px;
+  border: none;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.post-specific img{
+  height: auto;
+  object-fit: cover;
+}
+
+
+.wp-element-caption{
+  font-size: 22px;
   font-style: italic;
+  flex:50%; 
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 .wp-block-image{
-  width: 70%;
-  height: 200px;
-  flex-shrink: 0;
+  width: 50%;
+  height: auto;
   object-fit: cover;
+  margin: 20px auto;
 }
+
+.wp-block-gallery{
+  margin: 0;
+  padding: 0;
+}
+
+
+.size-large{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+width: 100%;
+}
+
+.size-large img{
+  flex-basis: calc(50% - 10px); 
+  margin: 5px; 
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+  /*==============
+Modal 
+================*/
+
+
+
+
+  /*==============
+about
+================*/
+
+
+
+
   /*==============
 subscribe section
 ================*/  
@@ -369,7 +442,15 @@ bolgs.html
   height: 400px;
 }
 
+.container-blogs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.blogpost{
+  flex-basis: calc(33% - 20px);
+}
 
     /*==============
 Icons

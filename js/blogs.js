@@ -10,16 +10,17 @@ const fullPostURL = apiBase + jsonBase + postEndpoint + "?_embed";
 async function getLatestPost() {
   const response = await fetch(fullPostURL);
   const latestPosts = await response.json();
+  
   return latestPosts;
 }
 
 // Create HTML
 function createPostHTML(latestPost) {
-  const container = document.querySelector(".latest-container");
+  const container = document.querySelector(".container-blogs");
 
   const productContainer = document.createElement("a");
   productContainer.href = "blog-specific.html?id=" + latestPost.id;
-  productContainer.classList.add("posts");
+  productContainer.classList.add("posts", "blogpost");
   productContainer.id = latestPost.id;
 
   const title = document.createElement("h4");
@@ -34,6 +35,7 @@ function createPostHTML(latestPost) {
       const image = document.createElement("img");
       image.src = featuredImage.source_url;
       productContainer.append(image);
+
     }
   }
 
@@ -46,14 +48,6 @@ function createPostsHTML(latestPosts) {
     createPostHTML(latestPost);
   }
 
-  container.append(productContainer);
-}
-
-function createPostsHTML(latestPosts) {
-    for (let i = 0; i < latestPosts.length; i++) {
-      const latestPost = latestPosts[i];
-      createPostHTML(latestPost);
-    }
 }
 
 // Create the main function

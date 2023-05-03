@@ -23,7 +23,7 @@ function createPostHTML(latestPost) {
   const container = document.querySelector(".specific-container");
 
   const productContainer = document.createElement("div");
-  productContainer.classList.add("post");
+  productContainer.classList.add("posts", "post-specific");
   productContainer.id = latestPost.id;
 
   const title = document.createElement("h1");

@@ -10,6 +10,7 @@ const fullPostURL = apiBase + jsonBase + postEndpoint + "?_embed";
 async function getLatestPost() {
   const response = await fetch(fullPostURL);
   const latestPosts = await response.json();
+  
   return latestPosts;
 }
 
