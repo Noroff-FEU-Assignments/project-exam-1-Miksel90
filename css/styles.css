@@ -508,12 +508,24 @@ Contact
   background-size: cover;
 }
 
+.contact-hue{
+  background: rgb(0,0,0,0.5);
+}
+
+.Contactinfo{
+  color: #fff;
+  width: 1000px;
+  max-width: 100%;
+  justify-content: center;
+}
+
 .column-contact{
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
   gap: 100px;
   justify-content: center;
+  color: #fff;
 }
 
 .column-contact div {
