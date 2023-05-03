@@ -1,6 +1,16 @@
   /*==============
 1. Global Values
 ================*/
+
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 *{
   margin: 0;
   padding: 0;
@@ -24,6 +34,7 @@ html, body {
 } 
 
 body {
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   color: black;
   display: flex;
@@ -361,7 +372,7 @@ bolgs.html
 
 
     /*==============
-5. Icons
+Icons
 ================*/
 
 .fa-brands {
@@ -384,6 +395,86 @@ bolgs.html
 .fa-square-youtube, .fa-cc-amex{
   color: crimson;
 }
+
+
+    /*==============
+Contact
+================*/
+
+.contact-background{
+  background-image: url(../images/course-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.column-contact{
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 100px;
+  justify-content: center;
+}
+
+.column-contact div {
+ flex: 1;
+}
+
+
+.form {
+  border-radius: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+}
+
+input {
+  border-color: #427784;
+  border-style: groove;
+  width: 300px;
+  max-width: 100%;
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+input[type=text], select, textarea, aria-label {
+  font-family:"Quicksand";
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #427784;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: #ffffff;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+.reg-button {
+  background: green;
+  width: 200px;
+  height: 80px;
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+} 
+
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
 /*==============
 Media queries
 ================*/
