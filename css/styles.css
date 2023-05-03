@@ -55,6 +55,7 @@ body {
   overflow-x: hidden;
 }
 
+
 h1,h2{
   font-size: 40px;
   margin-top: 10px;
@@ -310,7 +311,26 @@ Modal
 about
 ================*/
 
+.about-background{
+  background-image: url(../images/course-4.jpg);
+  height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  display: flex;
+}
 
+.about{
+  display: flex;
+  background: rgb(0,0,0,0.5);
+}
+  .about-text{
+    color:#fff;
+    font-size: 18px;
+    padding: 30px;
+    max-width: 100%;
+    text-align: left;
+  }
 
 
   /*==============
