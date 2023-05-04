@@ -418,6 +418,8 @@ footer
   padding: 5px 25px;
   font-size: 22px;
   max-width: 520px;
+  text-align: left;
+ 
 }
 
 .contact{
@@ -428,7 +430,6 @@ footer
 
 
 .some-container{
-  max-width: 180px;
   height: 47px;
   background-color:#fff;
   display: flex;
@@ -438,6 +439,7 @@ footer
 
 .some-text{
   font-size: 26px;
+  margin-left: 8px;
 }
 
 .btn1 a {
@@ -450,6 +452,13 @@ footer
   display: inline-block;
   margin-bottom: 20px;
   margin-top: 5px;
+}
+
+.btn1 a:hover{
+font-weight: bolder;
+transition: 0.9s;
+font-size: 35px;
+border-radius: 5px;
 }
 
     /*==============
@@ -513,7 +522,7 @@ Contact
 }
 
 .contact-hue{
-  background: rgb(0,0,0,0.5);
+  background: rgb(0,0,0,0.6);
   width: 100%;
 }
 
@@ -682,7 +691,7 @@ Media queries
       display: block;
       cursor: pointer;
       color: rgb(0, 0, 0);
-      font-size: 18px;
+      font-size: 28px;
       padding: 14px 16px;
       background-color: #ffffff;
       border: none;
