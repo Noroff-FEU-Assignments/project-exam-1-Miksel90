@@ -17,13 +17,8 @@
   box-sizing: border-box;
 }
 
-/* figure{
-display: flex;
-} */
-
-
 h2{
-  color: black;
+  color:#fff;
   font-size: 40px;
   text-align: center;
 }
@@ -313,7 +308,7 @@ about
 
 .about-background{
   background-image: url(../images/course-4.jpg);
-  height: 1000px;
+  height: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -331,6 +326,24 @@ about
     max-width: 100%;
     text-align: left;
   }
+
+  .container-golfer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .golfer {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .golfer-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
 
 
   /*==============
@@ -462,7 +475,7 @@ border-radius: 5px;
 }
 
     /*==============
-bolgs.html
+blogs.html
 ================*/
 
 
@@ -618,26 +631,30 @@ label {
   font-size: 22px;
 }
 
-/*==============
-About
-================*/
 
-.container-golfer{
-  display: flex;
-  flex-direction: column;
-}
-
-
-.golfer{
-height: 300px;
-width: 100%;
-}
 
 /*==============
 Media queries
 ================*/
+@media screen and (min-width: 768px) {
+  .container-golfer {
+    flex-wrap: nowrap;
+  }
 
+  .golfer {
+    width: auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 
+  .golfer:last-child {
+    margin-right: 0;
+  }
+
+  .golfer-text {
+    margin-bottom: 0;
+  }
+}
 
 @media screen and (max-width: 380px) {
   .tip-button {
