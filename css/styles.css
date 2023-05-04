@@ -328,15 +328,19 @@ about
   }
 
   .container-golfer {
+    height: auto;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    margin: 0 auto;
   }
   
   .golfer {
-    width: 100%;
-    max-width: 300px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    max-width: 200px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    object-fit: cover;
   }
   
   .golfer-text {
@@ -696,6 +700,9 @@ Media queries
       width: 100px;
       height: 40px;
       font-size: 15px;
+  }
+  .golfer{
+    max-width: 100%;
   }
 
   .form, input[type=textarea] {
