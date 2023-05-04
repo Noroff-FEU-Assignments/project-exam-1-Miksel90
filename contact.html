@@ -41,16 +41,16 @@
   <main>
     <div class="contact-background">
       <div class="contact-hue">
-      <div class="Contactinfo">
-        <h1>Contact Us</h1>
-        If you have any questions, concerns, or comments, please contact us, Monday to Friday 09:00 - 17:00 at +48 123 45 789
-        To contact us by email, please select a category from the drop down menu and fill in the fields below with as much 
-        detailed information as possible so we ensure your request gets passed to the correct team member.
-        As soon as we have received your message you'll receive a confirmation response email with a case number on it. 
-        If you do not receive a case number response email it means your message has not got through to us so please check your spam/junk folder or try again.
-      </div>
+        <div class="Contactinfo">
+          <h1>Contact Us</h1>
+          If you have any questions, concerns, or comments, please contact us, Monday to Friday 09:00 - 17:00 at +48 123 45 789
+          To contact us by email, please select a category from the drop down menu and fill in the fields below with as much 
+          detailed information as possible so we ensure your request gets passed to the correct team member.
+          As soon as we have received your message you'll receive a confirmation response email with a case number on it. 
+          If you do not receive a case number response email it means your message has not got through to us so please check your spam/junk folder or try again.
+        </div>  
         <div class="contact-container">
-          <div class="column-contact">
+          <div class="column contact">
             <form class="formValidation">
               <div id="messageValid"></div>
               <div class="row">
@@ -86,9 +86,9 @@
                 </div>
                 <div class="col-75">
                   <select id="subject" name="subject">
-                    <option value="refund">Refund</option>
-                    <option value="lost item">Lost item</option>
-                    <option value="transaction history">Transaction history</option>
+                    <option value="refund">Products</option>
+                    <option value="lost item">Events</option>
+                    <option value="transaction history">Praise</option>
                   </select>
                 </div>
               </div>
@@ -99,16 +99,17 @@
                 <div class="col-75">
                   <textarea id="textArea" name="textArea" placeholder="Write something.."></textarea>
                 </div>
-                <div class="form-error" id="textAreaError"> Must contain a description</div>
+                <div class="form-error" id="textAreaError"> Must contain a message!</div>
               </div>
-                <button class="sub-button">Submit</button>
+                <button class="sub-button">Submit</button>     
+          </div>
+          <div class="column contact-right">
+            <img class="contact-img" src="images/teacher-1.jpg" alt="A golfer helping another golfer with his stance">
           </div>
         </div>
       </div>
-      <div class="column-contact">
-      </div>
     </div>
-  </form>
+  </form> 
     <script src="js/contact.js"></script>
     <section class="subscribe">
       <div class="formvalidation">

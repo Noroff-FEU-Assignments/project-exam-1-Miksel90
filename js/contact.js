@@ -1,4 +1,3 @@
-//Variables for all the form and error messages
 const form = document.querySelector("form");
 const firstName = document.querySelector("#firstName");
 const firstNameError = document.querySelector("#firstNameError");
@@ -8,24 +7,26 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const textArea = document.querySelector("#textArea");
 const textAreaError = document.querySelector("#textAreaError");
-const button = document.querySelector("sub-button");
+const button = document.querySelector(".sub-button");
 
 
-// Function for the disabled button//
-function isButtonDisabled() {
+// Function to enable/disable the button
+function updateButtonState() {
     // validate the input data
-    if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(textArea.value, 1)) {
+    if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(textArea.value, 25)) {
         button.disabled = false;
     } else {
-        message.innerHTML = "You suck!";
+        messageValid.innerHTML = "Please fill out all the required fields!";
         button.disabled = true;
     }
 }
 
+
+// Function to handle form submission
 function submitForm(event) {
     event.preventDefault();
- 
-    // checking the input or an error message will show
+
+    // check if all required fields have been filled out
     if (checkLength(firstName.value, 1) === true) {
         firstNameError.style.display = "none";
     } else {
@@ -41,38 +42,39 @@ function submitForm(event) {
     } else {
         emailError.style.display = "block";
     }
-
-    // if all input is valid, change the button text to "Submitted"
-    if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(textArea.value, 1)) {
-        const subButton = document.querySelector(".sub-button");
-        subButton.innerHTML = "Submitted";
+    if (checkLength(textArea.value, 25) === true) {
+        textAreaError.style.display = "none";
+    } else {
+        textAreaError.style.display = "block";
     }
 
-    console.log("U are the best")
+    // if all input is valid, change the button text to "Submitted"
+    if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(textArea.value, 25)) {
+        button.innerHTML = "Submitted";
+        messageValid.innerHTML = "Thank you for submitting the form!";
+        messageValid.style.color = "green";
+    }
 }
 
 
-firstName.addEventListener("keyup", isButtonDisabled);
-surName.addEventListener("keyup", isButtonDisabled);
-email.addEventListener("keyup", isButtonDisabled);
-textArea.addEventListener("keyup", isButtonDisabled);
+// Add event listeners to form fields
+firstName.addEventListener("keyup", updateButtonState);
+surName.addEventListener("keyup", updateButtonState);
+email.addEventListener("keyup", updateButtonState);
+textArea.addEventListener("keyup", updateButtonState);
 
+// Add event listener to form submission
 form.addEventListener("submit", submitForm);
 
 
-//Check if the input matches the criterias
+// Helper function to check input length
 function checkLength(value, len) {
-    if (value.trim().length >= len) {
-        return true;
-    } else {
-        return false;
-    }
+    return value.trim().length >= len;
 }
 
 
-//check if its a valid email
+// Helper function to validate email address
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
-    const patternMatches = regEx.test(email);
-    return patternMatches;
+    return regEx.test(email);
 }
