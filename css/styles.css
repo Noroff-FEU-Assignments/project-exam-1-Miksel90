@@ -619,6 +619,21 @@ label {
 }
 
 /*==============
+About
+================*/
+
+.container-golfer{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.golfer{
+height: 300px;
+width: 100%;
+}
+
+/*==============
 Media queries
 ================*/
 
@@ -669,7 +684,7 @@ Media queries
   .form, input[type=textarea] {
     width: 100%;
     margin-top: 0;
-  }
+  } 
 
   .tip-button {
     padding:20px;
