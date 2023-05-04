@@ -104,8 +104,14 @@ header{
   color: black; 
 }
 
+.menu a:hover{
+  font-size: larger;
+  transition: 0.9s;
+  text-decoration: underline;
+}
+
 .menu a:first-child {
-  margin-left: 0; /* Remove left margin from first item */
+  margin-left: 0; 
 }
 
 .nav-right {
@@ -482,6 +488,7 @@ font-weight: bolder;
 transition: 0.9s;
 font-size: 35px;
 border-radius: 5px;
+text-decoration: underline;
 }
 
     /*==============
