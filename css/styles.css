@@ -622,6 +622,19 @@ label {
 Media queries
 ================*/
 
+
+
+@media screen and (max-width: 380px) {
+  .tip-button {
+    padding:20px;
+    right: 40%;
+  }
+  .index-text{
+    right: 40%;
+  }
+}
+
+
 @media screen and (max-width: 470px) {
   .tip-button a {
     font-size: 12px;
@@ -657,6 +670,11 @@ Media queries
     width: 100%;
     margin-top: 0;
   }
+
+  .tip-button {
+    padding:20px;
+   right: 20px;
+  }
     }
   
 
@@ -673,6 +691,7 @@ Media queries
     }
     .tip-button{
       padding:20px;
+      margin-left: 15px;
     }
     .tip-button a{
       font-size: 25px;
