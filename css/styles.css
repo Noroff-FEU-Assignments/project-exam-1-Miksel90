@@ -774,7 +774,7 @@ Media queries
     flex-direction: column;
     text-align: left;
     align-items: flex-end;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     width: 25%;
     padding-top: 20px;
     position: absolute;
