@@ -1,5 +1,5 @@
 // Base URL
-const apiBase = "http://bogeys-bunkers.local";
+const apiBase = "https://www.mikaelselstad.no";
 const jsonBase  = "/wp-json/wp/v2";
 const postEndpoint = "/posts"; 
 
