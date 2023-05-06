@@ -105,7 +105,7 @@ header{
 }
 
 .menu a:hover{
-  font-size: larger;
+transform: scale(1.2);
   transition: 0.9s;
   text-decoration: underline;
 }
@@ -165,7 +165,7 @@ Index page
 
   .tip-button a:hover{
     font-weight: bold;
-    font-size: 50px;
+    transform: scale(1.2);
     border-radius: 5px;
     transition: 0.9s;
   }
@@ -371,7 +371,6 @@ subscribe section
  height: 600px;
  background-size: cover;
  background-repeat: no-repeat;
- background-position:center -200px;
  margin-bottom: 5px;
  position: relative;
 }
@@ -459,11 +458,9 @@ footer
 
 
 .some-container{
-  height: 47px;
   background-color:#fff;
   display: flex;
   justify-content: space-evenly;
-  border-radius: 5px;
 }
 
 .some-text{
@@ -698,9 +695,6 @@ Media queries
 }
 
 @media screen and (max-width: 550px){
-.footer {
-    margin-top: -160px;
-}
 }
   
   @media (max-width: 600px) {
@@ -753,9 +747,6 @@ Media queries
       right: 0px;
       position: inherit;
     }
-    .footer{
-      margin-top: -90px;
-    }
     .menu {
       display: none;
     }
@@ -774,7 +765,6 @@ Media queries
     flex-direction: column;
     text-align: left;
     align-items: flex-end;
-    /* background-color: #ffffff; */
     width: 25%;
     padding-top: 20px;
     position: absolute;
@@ -786,6 +776,9 @@ Media queries
       padding: 8px 16px;
       font-size: 18px;
       text-align: right;
+      background-color: #fff;
+      width: 95px;
+      max-width: 100%;
     }
     .Contactinfo{
       margin-left: 0px;
