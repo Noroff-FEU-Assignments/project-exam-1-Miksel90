@@ -322,11 +322,12 @@ Specific page
 
 .post-specific{
   flex-basis: calc(100%);
-  max-width: 1000px;
+  max-width: 900px;
   border: none;
   margin: 10px;
   box-sizing: border-box;
 }
+
 
 .post-specific img{
   height: auto;
@@ -579,11 +580,23 @@ blogs.html
   flex-basis: calc(33% - 20px);
 }
 
+.more-button{
+  background:#B3C99C;
+  width: 160px;
+  height: 65px;
+  color:black;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius:10px;
+}
+
     /*==============
 Icons
 ================*/
 
-.fa-brands {
+.fa-brands{
   font-size: 40px;
   padding: 10px
 }
@@ -603,7 +616,6 @@ Icons
 .fa-square-youtube, .fa-cc-amex{
   color: crimson;
 }
-
 
     /*==============
 Contact
