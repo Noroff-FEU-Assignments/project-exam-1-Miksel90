@@ -9,7 +9,7 @@ const urlParams = new URLSearchParams(queryString);
 const postId = urlParams.get("id");
 
 // Full URL
-const fullPostURL = apiBase + jsonBase + postEndpoint + `/${postId}?_embed&fields=id,title,content,date`;
+const fullPostURL = apiBase + jsonBase + postEndpoint + `/${postId}?_embed&fields=id,title,content,date&_embed`;
 
 // Fetch single post
 async function singleBlogPost() {
@@ -30,6 +30,7 @@ function createPostHTML(latestPost) {
   title.innerText = latestPost.title.rendered;
   productContainer.append(title);
 
+
   const content = document.createElement("div");
   content.innerHTML = latestPost.content.rendered;
   productContainer.append(content);
@@ -37,6 +38,8 @@ function createPostHTML(latestPost) {
   const date = document.createElement("p");
   date.innerText = latestPost.date;
   productContainer.append(date);
+
+
 
   container.append(productContainer);
 }

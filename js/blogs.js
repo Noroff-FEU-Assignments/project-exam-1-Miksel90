@@ -8,10 +8,22 @@ const fullPostURL = apiBase + jsonBase + postEndpoint + "?_embed";
 
 // Fetching the products
 async function getLatestPost() {
-  const response = await fetch(fullPostURL);
-  const latestPosts = await response.json();
-  
-  return latestPosts;
+  const allPosts = [];
+
+  let page = 1;
+  let totalPages = 1;
+
+  while (page <= totalPages) {
+    const response = await fetch(`${fullPostURL}&page=${page}`);
+    const posts = await response.json();
+
+    allPosts.push(...posts);
+
+    totalPages = response.headers.get('X-WP-TotalPages');
+    page++;
+  }
+
+  return allPosts;
 }
 
 // Create HTML
