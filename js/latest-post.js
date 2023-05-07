@@ -115,13 +115,14 @@ function next(){
       container.children[i].classList.add("hidden");
     }
   }
-  function handleNextButton (){
-    const btn = document.querySelector(".next")
-    if (carouselPage == 2 ){
-      btn.setAttribute("disabled","")
-    } else{
-      btn.removeAttribute("disabled","")
-    }
+}
+function handleNextButton (){
+  const btn = document.querySelector(".next")
+  if (carouselPage == 1 ){
+    btn.setAttribute("disabled","")
+  } else{
+    btn.removeAttribute("disabled","")
+  }
 }
 
 function prev(){
