@@ -19,7 +19,7 @@ async function getLatestPost() {
 
     allPosts.push(...posts);
  
-    totalPages = response.headers.get('X-WP-TotalPages');
+    totalPages = response.headers.get("X-WP-TotalPages");
     page++;
   }
 
@@ -79,10 +79,7 @@ function createPostsHTML(latestPosts) {
 if ((latestPosts.length -1) == i){
   setUpCarousel()
 }    
-
   }
-
-
   prevBtn.style.display = "block"; 
   nextBtn.style.display = "block"; 
   loader.style.display = "block"; 
@@ -118,7 +115,7 @@ function next(){
 }
 function handleNextButton (){
   const btn = document.querySelector(".next")
-  if (carouselPage == 1 ){
+  if (carouselPage == 2 ){
     btn.setAttribute("disabled","")
   } else{
     btn.removeAttribute("disabled","")

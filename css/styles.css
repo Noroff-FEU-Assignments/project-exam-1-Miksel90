@@ -884,4 +884,7 @@ Media queries
   .contact-right{
     display: none;
   }
+  .latest-container{
+    flex-direction: column;
+  }
   }
