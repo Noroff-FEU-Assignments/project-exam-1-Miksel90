@@ -17,15 +17,19 @@
   box-sizing: border-box;
 }
 
+em{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p{
+  margin-bottom: 1em;
+}
 h2{
   color:#fff;
   font-size: 40px;
   text-align: center;
 }
-
-  h4{
-    margin-bottom: 3px;
-  }
 
 a {
     color: black;
@@ -48,12 +52,14 @@ body {
   text-align: center;
   background-color:#fff;
   overflow-x: hidden;
+  text-align: left;
 }
 
 
 h1,h2{
   font-size: 40px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 img{
@@ -270,6 +276,9 @@ Carousel
   transition: transform 0.5s ease-in-out;
 }
 
+.posts.hidden{
+  display: none;
+}
 
 .posts img{
   width: 70%;
