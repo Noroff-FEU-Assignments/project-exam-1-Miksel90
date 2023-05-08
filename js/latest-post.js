@@ -98,58 +98,58 @@ function setUpCarousel(){
   }, 100);
 }
 
-  function next(){
-    carouselPage++;
-    const container = document.querySelector(".latest-container");
-    handlePrevButton();
-    for (let i = 0; i < container.children.length; i++) {
-      container.children[i].classList.remove("hidden");
-      if (carouselPage === 1) {
-        if(i <= 3 || i > 7){
-          container.children[i].classList.add("hidden");
-        } 
-      }
-      if (carouselPage === 2) {
-        if (i <= 7 || i > 11){
-          container.children[i].classList.add("hidden");
-        }
+function next(){
+  carouselPage++;
+  const container = document.querySelector(".latest-container");
+  handlePrevButton();
+  handleNextButton();
+  for (let i = 0; i < container.children.length; i++) {
+    container.children[i].classList.remove("hidden");
+    if (carouselPage === 1) {
+      if(i <= 3 || i > 7){
+        container.children[i].classList.add("hidden");
+      } 
+    }
+    if (carouselPage === 2) {
+      if (i <= 7){
+        container.children[i].classList.add("hidden");
       }
     }
   }
+}
 
 function handleNextButton(){
-  const btn = document.querySelector(".next")
-  console.log(next);
-  if (carouselPage === 2 ){
-    btn.setAttribute("disabled","")
-  } else{
-    btn.removeAttribute("disabled","")
-  }
+const btn = document.querySelector(".next")
+console.log(next);
+if (carouselPage === 2 ){
+  btn.setAttribute("disabled","")
+} else{
+  btn.removeAttribute("disabled","")
 }
-
-handleNextButton()
+}
 
 function prev(){
-  carouselPage--;
-  const container = document.querySelector(".latest-container")
-  handlePrevButton ()
-  for (let i = 0; i < container.children.length; i++) {
-    container.children[i].classList.remove("hidden")
-    if(carouselPage == 0 && i>3){
-      container.children[i].classList.add("hidden");
-    }
-    if(carouselPage == 1 && i<=3 || i>7){
-      container.children[i].classList.add("hidden");
-    } 
+carouselPage--;
+const container = document.querySelector(".latest-container")
+handlePrevButton();
+handleNextButton();
+for (let i = 0; i < container.children.length; i++) {
+  container.children[i].classList.remove("hidden")
+  if(carouselPage == 0 && i>3){
+    container.children[i].classList.add("hidden");
   }
+  if(carouselPage == 1 && i<=3 || i>7){
+    container.children[i].classList.add("hidden");
+  } 
+}
 }
 function handlePrevButton(){
-  const btn = document.querySelector(".prev")
-  if (carouselPage === 0 ){
-    btn.setAttribute("disabled","")
-  } else{
-    btn.removeAttribute("disabled","")
-  }
+const btn = document.querySelector(".prev")
+if (carouselPage === 0 ){
+  btn.setAttribute("disabled","")
+} else{
+  btn.removeAttribute("disabled","")
+}
 }
 
 async function main() {
