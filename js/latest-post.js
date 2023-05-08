@@ -122,6 +122,8 @@ function handleNextButton (){
   }
 }
 
+handleNextButton()
+
 function prev(){
   carouselPage--;
   const container = document.querySelector(".latest-container")
