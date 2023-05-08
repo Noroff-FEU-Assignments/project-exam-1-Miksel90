@@ -28,7 +28,6 @@ p{
 h2{
   color:black;
   font-size: 40px;
-  text-align: center;
 }
 
 a {
@@ -60,6 +59,7 @@ h1,h2{
   font-size: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 img{
@@ -766,6 +766,11 @@ Media queries
 }
 
 
+@media screen and (max-width: 400px) {
+
+}
+
+
 @media screen and (max-width: 470px) {
   .tip-button a {
     font-size: 12px;
@@ -776,7 +781,6 @@ Media queries
   input[type=text], select, textarea, aria-label {
     width: 100%;
   }
-
 }
 
 @media screen and (max-width: 550px){
@@ -871,6 +875,13 @@ Media queries
     }
   }
 
+
+
+@media screen and (max-width:850px) {
+  .title{
+    font-size: 24px;
+  }
+} 
   
 @media(max-width:1000px){
   
