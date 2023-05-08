@@ -270,10 +270,12 @@ Carousel
   flex-basis: calc(25% - 20px);
   padding: 5px;
   margin: 10px;
+  text-align: center;
   border-style: groove;
   border-color:black;
   transition: transform 0.5s ease-in-out;
 }
+
 
 .posts.hidden{
   display: none;
