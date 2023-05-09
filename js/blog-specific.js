@@ -38,9 +38,7 @@ function createPostHTML(latestPost) {
   const date = document.createElement("p");
   date.innerText = latestPost.date;
   productContainer.append(date);
-
-
-
+  
   container.append(productContainer);
 }
 
