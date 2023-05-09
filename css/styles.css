@@ -261,30 +261,32 @@ Carousel
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
-  gap: 1rem;
-  scroll-behavior: smooth; /* Enable smooth scrolling */
+  gap: 10px;
 }
-
-.posts{
-  font-size: 20px;
-  flex-basis: calc(25% - 20px);
-  padding: 5px;
-  margin: 10px;
-  text-align: center;
-  border-style: groove;
-  border-color:black;
-  transition: transform 0.5s ease-in-out;
-}
-
 
 .posts.hidden{
   display: none;
 }
 
+.posts{
+  font-size: 20px;
+  flex-basis: calc(25% - 10px);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px;
+  text-align: center;
+  border-style: groove;
+  border-color:black;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+}
+
 .posts img{
   width: 100%;
-  height: 250px;
-  object-fit: contain;
+  height: 200px;
+  object-fit: cover;
   margin-top: 20px;
 }
 
@@ -902,7 +904,7 @@ Media queries
     width: 25%;
     padding-top: 20px;
     position: absolute;
-    top: 50px;
+    top: 60px;
     right: -90px;
     }
   
