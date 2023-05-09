@@ -1,5 +1,5 @@
 
-const imgs = document.querySelectorAll(".size-large");
+const imgs = document.querySelectorAll(".specific-container");
 
 console.log({imgs})
 
