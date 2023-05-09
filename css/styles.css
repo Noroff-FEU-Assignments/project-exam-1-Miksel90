@@ -102,7 +102,7 @@ header{
 .menu {
   display: flex;
   margin-right: 100px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .menu a {
@@ -217,7 +217,7 @@ Index page
     padding: 10px;
     border-radius: 10px;
     font-size: 50px;
-    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .tip-button{
@@ -274,7 +274,6 @@ Carousel
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 5px;
-  text-align: center;
   border-style: groove;
   border-color:black;
   display: flex;
