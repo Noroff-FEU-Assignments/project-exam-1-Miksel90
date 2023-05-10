@@ -335,25 +335,11 @@ Specific page
 }
 
 
-.post-specific img{
-  height: auto;
-  object-fit: cover;
-}
-
-
-.wp-element-caption{
-  font-size: 22px;
-  font-style: italic;
-  flex:50%; 
-  margin: 10px;
-  box-sizing: border-box;
-}
-
 .wp-block-image{
   width: 50%;
   height: auto;
   object-fit: cover;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .wp-block-gallery{
@@ -385,7 +371,7 @@ Modal
 ================*/
 
 dialog{
-  max-width: 900px;
+  max-width: 700px;
   margin: auto;
   background:none;
   border: none;
