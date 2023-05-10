@@ -53,7 +53,5 @@ async function main() {
 }
 
 
-
-
 // Run the entire function
 main();
