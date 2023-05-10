@@ -877,8 +877,8 @@ Media queries
       max-width: 100%;
     }
     .Contactinfo{
-      margin-left: 0px;
-      text-align: inherit;
+      margin: 0 auto;
+      text-align: center;
     }
     .wp-block-gallery{
       flex-direction: column;
