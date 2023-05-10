@@ -1,5 +1,3 @@
-//modal for images
-import createModal from "./modal.js";
 
 // Base URL
 const apiBase = "https://www.mikaelselstad.no";
@@ -49,9 +47,42 @@ function createPostHTML(latestPost) {
 async function main() {
   const post = await singleBlogPost();
   createPostHTML(post);
-  createModal();
+  modalFunc();
+
 }
 
 
 // Run the entire function
 main();
+
+
+//Creating the modal from the images
+const modalImg = document.querySelector('.modal-img')
+const modal = document.querySelector('.modal')
+
+function modalFunc() {
+  const images = document.querySelectorAll("img");
+  const modal = document.querySelector("dialog");
+  const modalImg = document.querySelector(".modal-img");
+  const closeButton = document.querySelector(".exit-modal");
+
+  images.forEach(function(image) {
+    image.addEventListener("click", function() {
+      modal.showModal();
+      modalImg.src = this.src;
+    });
+  });
+
+  modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.close();
+    }
+  });
+
+  closeButton.addEventListener("click", function() {
+    modal.close();
+  });
+}
+
+
+
