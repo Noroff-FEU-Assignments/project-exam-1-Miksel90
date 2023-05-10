@@ -829,7 +829,8 @@ Media queries
       font-size: 15px;
     }
     .index-text{
-      font-size: 40px;
+      font-size: 30px;
+      text-align: center;
     }
     .tip-button{
       padding:20px;
