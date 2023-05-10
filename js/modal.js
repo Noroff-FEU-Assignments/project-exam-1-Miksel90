@@ -1,8 +1,10 @@
 
-const imgs = document.querySelectorAll('img');
+function createModal(){
+    const images = document.querySelectorAll("img");
+    console.log(images);
+  }
 
-console.log({imgs})
-
+  export default createModal;
 
 // img.forEach(element => {
 //     element.addEventListener("click", function() {

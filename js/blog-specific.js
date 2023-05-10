@@ -1,3 +1,6 @@
+//modal for images
+import createModal from "./modal.js";
+
 // Base URL
 const apiBase = "https://www.mikaelselstad.no";
 const jsonBase = "/wp-json/wp/v2";
@@ -46,7 +49,11 @@ function createPostHTML(latestPost) {
 async function main() {
   const post = await singleBlogPost();
   createPostHTML(post);
+  createModal();
 }
+
+
+
 
 // Run the entire function
 main();
