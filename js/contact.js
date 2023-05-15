@@ -56,9 +56,16 @@ function submitForm(event) {
 
     // if all input is valid, change the button text to "Submitted"
     if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(subject.value, 15) && checkLength(textArea.value, 25)) {
-        button.innerHTML = "Thank You";
+        button.style.display = "none";
+        // firstName.style.display = "none";
+        // surName.style.display = "none";
+        // email.style.display = "none";
+        // subject.style.display = "none";
+        // textArea.style.display = "none";
         messageValid.innerHTML = "Thank you for submitting the form!";
-        messageValid.style.color = "green";
+        messageValid.style.color = "white";
+        messageValid.style.fontSize = "40px";
+        messageValid.style.marginTop = "30px";
     }
 }
 
