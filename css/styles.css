@@ -835,6 +835,9 @@ Media queries
 
 
 @media screen and (max-width: 756px) {
+    .posts{
+      min-width: 200px;
+    }
     .nav-right {
       display: none;
     }
