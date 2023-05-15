@@ -836,6 +836,9 @@ Media queries
     .posts{
       min-width: 300px;
     }
+    .blogpost{
+      min-width: 200px;
+    }
     .nav-right {
       display: none;
     }
