@@ -789,6 +789,9 @@ Media queries
 
 
 @media screen and (max-width: 470px) {
+  .blogpost{
+    min-width: 120px;
+  }
   .tip-button a {
     font-size: 12px;
   }
@@ -804,7 +807,6 @@ Media queries
 }
   
   @media (max-width: 600px) {
-
     .subscribe-text{
       top:10px;
       font-size: 20px;
@@ -833,12 +835,6 @@ Media queries
 
 
 @media screen and (max-width: 756px) {
-    .posts{
-      min-width: 300px;
-    }
-    .blogpost{
-      min-width: 200px;
-    }
     .nav-right {
       display: none;
     }
