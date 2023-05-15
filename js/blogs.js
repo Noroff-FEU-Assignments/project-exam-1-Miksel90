@@ -1,12 +1,16 @@
 // Base URL
 const apiBase = "https://www.mikaelselstad.no";
-const jsonBase  = "/wp-json/wp/v2";
-const postEndpoint = "/posts"; 
+const jsonBase = "/wp-json/wp/v2";
+const postEndpoint = "/posts";
 
-// Full URL 
+// Full URL
 const fullPostURL = apiBase + jsonBase + postEndpoint + "?_embed";
 
-// Fetching the products
+// Global variables
+let displayedPosts = 10;
+const numBlogsToShow = 10;
+
+// Fetching the posts
 async function getLatestPost() {
   const allPosts = [];
 
@@ -19,7 +23,7 @@ async function getLatestPost() {
 
     allPosts.push(...posts);
 
-    totalPages = response.headers.get('X-WP-TotalPages');
+    totalPages = response.headers.get("X-WP-TotalPages");
     page++;
   }
 
@@ -47,26 +51,44 @@ function createPostHTML(latestPost) {
       const image = document.createElement("img");
       image.src = featuredImage.source_url;
       productContainer.append(image);
-
     }
   }
 
   container.append(productContainer);
 }
 
-function createPostsHTML(latestPosts) {
-  for (let i = 0; i < latestPosts.length; i++) {
-    const latestPost = latestPosts[i];
-    createPostHTML(latestPost);
-  }
-
-}
-
 // Create the main function
 async function main() {
+  // Create HTML
+  function createPostsHTML(latestPosts, startIndex, numPosts) {
+    for (let i = startIndex; i < startIndex + numPosts && i < latestPosts.length; i++) {
+      const latestPost = latestPosts[i];
+      createPostHTML(latestPost);
+    }
+  }
+
+  // Show more posts
+  async function showMorePosts() {
+    const latestPosts = await getLatestPost();
+    const startIndex = displayedPosts;
+    const numPostsToShow = numBlogsToShow;
+
+    createPostsHTML(latestPosts, startIndex, numPostsToShow);
+    displayedPosts += numPostsToShow;
+
+    if (displayedPosts >= latestPosts.length) {
+      const moreButton = document.querySelector(".more-button");
+      moreButton.style.display = "none";
+    }
+  }
+
   const latestPosts = await getLatestPost();
-  createPostsHTML(latestPosts);
+  createPostsHTML(latestPosts, 0, displayedPosts);
+
+  const moreButton = document.querySelector(".more-button");
+  moreButton.addEventListener("click", showMorePosts);
 }
 
 // Run the entire function
 main();
+
