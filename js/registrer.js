@@ -21,7 +21,6 @@ function submitForm(event) {
     // checking the input or an error message will show
     if (validateEmail(email.value) === true) {
         emailError.style.display = "none";
-        // Update button text 
         button.innerHTML = "Awesome Work";
     } else {
         emailError.style.display = "block";
