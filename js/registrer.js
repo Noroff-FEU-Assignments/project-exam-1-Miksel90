@@ -2,7 +2,7 @@
 const form = document.querySelector("form");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
-const button = document.querySelector("sub-button");
+const button = document.querySelector(".sub-button");
 
 // Function to enable/disable the button
 function updateButtonState() {
@@ -28,17 +28,15 @@ function submitForm(event) {
     // if all input is valid, hide button
     if (validateEmail(email.value)) {
         button.style.display = "none";
-        messageValid.innerHTML = "Thank you for submitting the form!";
+        messageValid.innerHTML = "Thank you for subscribing!";
         messageValid.style.color = "white";
         messageValid.style.fontSize = "40px";
-        messageValid.style.marginTop = "30px";
+        messageValid.style.marginTop = "20px";
     }
 }
 
-
-
 form.addEventListener("submit", submitForm);
-email.addEventListener("keyup", isButtonDisabled);
+email.addEventListener("keyup", updateButtonState);
 
 // check if it's a valid email
 function validateEmail(email) {
