@@ -833,6 +833,9 @@ Media queries
 
 
 @media screen and (max-width: 756px) {
+    .posts{
+      min-width: 300px;
+    }
     .nav-right {
       display: none;
     }
@@ -908,8 +911,5 @@ Media queries
   
   .contact-right{
     display: none;
-  }
-  .latest-container{
-    flex-direction: column;
   }
   }
