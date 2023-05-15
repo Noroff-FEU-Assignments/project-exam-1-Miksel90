@@ -5,6 +5,8 @@ const surName = document.querySelector("#surName");
 const surNameError = document.querySelector("#surNameError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
+const subject = document.querySelector("#subject");
+const subjectError = document.querySelector("#subjectError");
 const textArea = document.querySelector("#textArea");
 const textAreaError = document.querySelector("#textAreaError");
 const button = document.querySelector(".sub-button");
@@ -13,14 +15,13 @@ const button = document.querySelector(".sub-button");
 // Function to enable/disable the button
 function updateButtonState() {
     // validate the input data
-    if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(textArea.value, 25)) {
+    if (checkLength(firstName.value, 5) && checkLength(surName.value, 5) && validateEmail(email.value) && checkLength(subject.value, 15) && checkLength(textArea.value, 25)) {
         button.disabled = false;
     } else {
         messageValid.innerHTML = "Please fill out all the required fields!";
         button.disabled = true;
     }
 }
-
 
 // Function to handle form submission
 function submitForm(event) {
@@ -42,6 +43,11 @@ function submitForm(event) {
     } else {
         emailError.style.display = "block";
     }
+    if (checkLength(subject.value, 1) === true) {
+        subjectError.style.display = "none";
+    } else {
+        subjectError.style.display = "block";
+    }
     if (checkLength(textArea.value, 25) === true) {
         textAreaError.style.display = "none";
     } else {
@@ -49,8 +55,8 @@ function submitForm(event) {
     }
 
     // if all input is valid, change the button text to "Submitted"
-    if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(textArea.value, 25)) {
-        button.innerHTML = "Submitted";
+    if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(subject.value, 15) && checkLength(textArea.value, 25)) {
+        button.innerHTML = "Thank You";
         messageValid.innerHTML = "Thank you for submitting the form!";
         messageValid.style.color = "green";
     }
@@ -61,6 +67,7 @@ function submitForm(event) {
 firstName.addEventListener("keyup", updateButtonState);
 surName.addEventListener("keyup", updateButtonState);
 email.addEventListener("keyup", updateButtonState);
+subject.addEventListener("keyup", updateButtonState);
 textArea.addEventListener("keyup", updateButtonState);
 
 // Add event listener to form submission
