@@ -4,28 +4,38 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const button = document.querySelector("sub-button");
 
-// Function for the disabled button//
-function isButtonDisabled() {
+// Function to enable/disable the button
+function updateButtonState() {
     // validate the input data
     if (validateEmail(email.value)) {
         button.disabled = false;
     } else {
-        message.innerHTML = "";
         button.disabled = true;
     }
 }
 
+// Function to handle form submission
 function submitForm(event) {
     event.preventDefault();
 
-    // checking the input or an error message will show
+    // check if all required fields have been filled out
     if (validateEmail(email.value) === true) {
         emailError.style.display = "none";
-        button.innerHTML = "Awesome Work";
     } else {
         emailError.style.display = "block";
     }
+
+    // if all input is valid, hide button
+    if (validateEmail(email.value)) {
+        button.style.display = "none";
+        messageValid.innerHTML = "Thank you for submitting the form!";
+        messageValid.style.color = "white";
+        messageValid.style.fontSize = "40px";
+        messageValid.style.marginTop = "30px";
+    }
 }
+
+
 
 form.addEventListener("submit", submitForm);
 email.addEventListener("keyup", isButtonDisabled);
