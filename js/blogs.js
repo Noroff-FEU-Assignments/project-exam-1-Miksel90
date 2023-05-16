@@ -50,6 +50,7 @@ function createPostHTML(latestPost) {
       const featuredImage = featuredMedia[0];
       const image = document.createElement("img");
       image.src = featuredImage.source_url;
+          image.alt = featuredImage.alt_text || latestPost.title.rendered;
       productContainer.append(image);
     }
   }
