@@ -1,4 +1,3 @@
-
 // Base URL
 const apiBase = "https://www.mikaelselstad.no";
 const jsonBase = "/wp-json/wp/v2";
@@ -21,7 +20,7 @@ async function singleBlogPost() {
 
 // Update document title
 function updateTitle(title) {
-  document.title = title;
+  document.querySelector("title").innerText = title;
 }
 
 // Create HTML
@@ -36,7 +35,6 @@ function createPostHTML(latestPost) {
   title.innerText = latestPost.title.rendered;
   productContainer.append(title);
 
-
   const content = document.createElement("div");
   content.innerHTML = latestPost.content.rendered;
   productContainer.append(content);
@@ -44,10 +42,10 @@ function createPostHTML(latestPost) {
   const date = document.createElement("p");
   date.innerText = latestPost.date;
   productContainer.append(date);
-  
+
   container.append(productContainer);
 
-  updateTitle(`Blog | ${latestPost.title.rendered}`)
+  updateTitle(`Blog | ${latestPost.title.rendered}`);
 }
 
 // Create the main function
@@ -55,12 +53,11 @@ async function main() {
   const post = await singleBlogPost();
   createPostHTML(post);
   modalFunc();
-
 }
-
 
 // Run the entire function
 main();
+
 
 
 //Creating the modal from the images
