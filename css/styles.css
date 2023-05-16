@@ -26,11 +26,6 @@ p{
   text-align: left;
 }
 
-h2{
-  color:black;
-  font-size: 40px;
-}
-
 a {
     color: black;
     text-decoration: none;
@@ -150,6 +145,7 @@ Loader
   height: 25rem;
   border-radius: 2.5rem;
   transform: translate(-50%, -50%) scale(.5, .3);
+  
   &:before {
     position: absolute;
     width: 5rem;
@@ -160,6 +156,7 @@ Loader
     content: '';
     border-radius: 2.5rem;
   }
+
   &:after {
     content: '';
     background-color: #fff;
@@ -173,6 +170,7 @@ Loader
     animation: ballloop 2s ease infinite;
   }
 }
+
 @keyframes ballloop {
   0% {
     opacity: 0;
@@ -747,6 +745,47 @@ label {
   font-size: 22px;
 }
 
+/*==============
+Tip of the week 
+================*/
+
+.tip-h1{
+  color:#fff
+}
+
+.tip-background{
+background-image:url(../images/subscribe.jpg);
+min-height: 1000px;
+background-attachment: fixed;
+background-position: top;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.tip-video{
+  height: 560px;
+  width: 50%;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.video-wrapper{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tip-text{
+  display: flex;
+  max-width: 950px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  color: #fff;
+  background-color: rgb(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 5px;
+}
 
 
 /*==============
@@ -914,4 +953,14 @@ Media queries
   .contact-right{
     display: none;
   }
+  .tip-video{
+    height: 400px;
+    width: 90%;
+  }
+  }
+
+  @media only screen and (max-device-width: 1366px) {
+    .tip-background{
+      background-attachment: scroll;
+    }
   }
