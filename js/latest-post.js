@@ -1,3 +1,4 @@
+// The Api im fetching from 
 const apiBase = "https://www.mikaelselstad.no/";
 const jsonBase = "/wp-json/wp/v2";
 const postEndpoint = "/posts";
@@ -6,7 +7,7 @@ const fullPostURL = apiBase + jsonBase + postEndpoint + "?_embed";
 const carouselPages = 0;
 var carouselPage = 0;
 
-
+//fetching and returning data
 async function getLatestPost() {
   const allPosts = [];
 
@@ -26,7 +27,7 @@ async function getLatestPost() {
   return allPosts;
 }
 
-//Creating divs
+//Creating HTML
 function createPostHTML(latestPost) {
   const container = document.querySelector(".latest-container");
 
@@ -45,6 +46,7 @@ function createPostHTML(latestPost) {
       const featuredImage = featuredMedia[0];
       const image = document.createElement("img");
       image.src = featuredImage.source_url;
+      image.alt = featuredImage.alt_text || latestPost.title.rendered;
       productContainer.append(image);
     }
   }
