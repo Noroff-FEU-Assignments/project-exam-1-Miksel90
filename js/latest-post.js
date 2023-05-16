@@ -100,6 +100,7 @@ function setUpCarousel(){
   }, 100);
 }
 
+//
 function next(){
   carouselPage++;
   const container = document.querySelector(".latest-container");
