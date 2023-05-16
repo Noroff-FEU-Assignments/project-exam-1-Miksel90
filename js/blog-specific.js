@@ -19,6 +19,11 @@ async function singleBlogPost() {
   return post;
 }
 
+// Update document title
+function updateTitle(title) {
+  document.title = title;
+}
+
 // Create HTML
 function createPostHTML(latestPost) {
   const container = document.querySelector(".specific-container");
@@ -41,6 +46,8 @@ function createPostHTML(latestPost) {
   productContainer.append(date);
   
   container.append(productContainer);
+
+  updateTitle(`Blog | ${latestPost.title.rendered}`)
 }
 
 // Create the main function
