@@ -4,8 +4,7 @@ const jsonBase = "/wp-json/wp/v2";
 const postEndpoint = "/posts";
 
 const fullPostURL = apiBase + jsonBase + postEndpoint + "?_embed";
-const carouselPages = 0;
-var carouselPage = 0;
+
 
 //fetching and returning data
 async function getLatestPost() {
@@ -87,6 +86,9 @@ if ((latestPosts.length -1) == i){
   loader.style.display = "block"; 
   scene.style.display = "block";
 }
+
+const carouselPages = 0;
+var carouselPage = 0;
 
 function setUpCarousel(){
   setTimeout(() => {

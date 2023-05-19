@@ -58,9 +58,8 @@ function createPostHTML(latestPost) {
   container.append(productContainer);
 }
 
-// Create the main function
+// Setting up main function
 async function main() {
-  // Create HTML
   function createPostsHTML(latestPosts, startIndex, numPosts) {
     for (let i = startIndex; i < startIndex + numPosts && i < latestPosts.length; i++) {
       const latestPost = latestPosts[i];

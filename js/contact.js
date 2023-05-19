@@ -54,7 +54,7 @@ function submitForm(event) {
         textAreaError.style.display = "block";
     }
 
-    // if all input is valid, change the button text to "Submitted"
+    // if all input is valid, show validation
     if (checkLength(firstName.value, 1) && checkLength(surName.value, 1) && validateEmail(email.value) && checkLength(subject.value, 15) && checkLength(textArea.value, 25)) {
         button.style.display = "none";
         messageValid.innerHTML = "Thank you for submitting the form!";
