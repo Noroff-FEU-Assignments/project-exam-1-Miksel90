@@ -822,15 +822,7 @@ Media queries
 }
 
 
-@media screen and (max-width: 400px) {
-
-}
-
-
 @media screen and (max-width: 470px) {
-  .blogpost{
-    min-width: 120px;
-  }
   .tip-button a {
     font-size: 12px;
   }
@@ -840,9 +832,6 @@ Media queries
   input[type=text], select, textarea, aria-label {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 550px){
 }
   
   @media (max-width: 600px) {
@@ -875,7 +864,9 @@ Media queries
 
 @media screen and (max-width: 756px) {
     .posts{
-      min-width: 200px;
+      min-width: 170px;
+      flex-wrap: wrap;
+      margin: 5px auto;
     }
     .nav-right {
       display: none;
