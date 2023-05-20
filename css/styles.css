@@ -408,8 +408,8 @@ about
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: center;
-  display: flex;
+  background-attachment: fixed;
+  background-position: top;
 }
 
 .about{
@@ -431,34 +431,52 @@ about
 }
 
 .container-golfer {
-  width: 100%;
-  height: auto;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-flow: wrap;
   margin: 0 auto;
+  gap: 10px;
 }
-  
-.golfer {
-  object-fit: cover;
-  min-height: 400px;
-  max-width: 300px;
-  height: auto;
+
+.card {
+  background-color: #222831;
+  height: 550px;
+  width: 300px;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  text-align: center; 
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-.golfer-text {
-text-align: center;
-margin-top: 20px;
+.card-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
 }
 
-ul{
-  list-style-type: none;
+.card-image {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 5px solid #272133;
+  margin-top: 20px;
+  box-shadow: 0 10px 50px rgb(53, 126, 45);
 }
 
+
+.some-container-about{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-self: center;
+}
+
+.some-container-about a{
+  font-size: 18px;
+  color: #fff;
+}
   /*==============
 subscribe section
 ================*/  
@@ -629,20 +647,43 @@ Icons
   padding: 10px
 }
 
-.fa-square-facebook, .fa-cc-visa{
+.fa-brands a{
+  cursor: pointer;
+}
+
+.fa-brands a:hover{
+  background-color: rgb(35 121 35);
+}
+
+.fa-square-facebook{
   color: blue;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-right: 5px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .fa-square-instagram{
   color:indianred;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-right: 5px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
-.fa-square-twitter, .fa-cc-paypal{
+.fa-square-twitter{
   color:cornflowerblue;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-right: 5px;
+  padding: 5px;
+  margin-top: 5px;
 }
 
-.fa-square-youtube, .fa-cc-amex{
-  color: crimson;
+.fa-square-youtube{
+  color:crimson;
 }
 
     /*==============
@@ -792,23 +833,9 @@ background-size: cover;
 Media queries
 ================*/
 @media screen and (min-width: 768px) {
-  .container-golfer {
-    flex-wrap: nowrap;
-  }
-
-  .golfer {
-    width: auto;
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-
-  .golfer:last-child {
-    margin-right: 0;
-  }
-
-  .golfer-text {
-    margin-bottom: 0;
-  }
+  /* .container-golfer {
+     flex-wrap: nowrap; 
+  } */
 }
 
 @media screen and (max-width: 380px) {
@@ -844,9 +871,10 @@ Media queries
       height: 40px;
       font-size: 15px;
   }
-  .golfer{
+  .card{
     max-width: 100%;
-    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 
   .form, input[type=textarea] {
@@ -856,7 +884,7 @@ Media queries
 
   .tip-button {
     padding:20px;
-   right: 20px;
+    right: 20px;
   }
     }
   
@@ -951,7 +979,8 @@ Media queries
   }
 
   @media only screen and (max-device-width: 1366px) {
-    .tip-background{
+    .tip-background,.about-background{
       background-attachment: scroll;
     }
+    
   }
