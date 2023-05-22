@@ -902,8 +902,8 @@ Media queries
     right: 20px;
   }
 
-  .posts img{
-    width: 90%;
+  .size-large img{
+    max-width: 90%;
 }
 }
 
