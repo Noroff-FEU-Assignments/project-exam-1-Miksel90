@@ -709,10 +709,11 @@ Contact
 
 .Contactinfo{
   color: #fff;
-  width: 1000px;
-  max-width: 100%;
+  font-size: 22px;
+  padding: 10px;
+  max-width: 1200px;
   text-align: left;
-  margin-left: 20px;
+  margin: 0 auto;
 }
 
 .contact-container{
@@ -873,12 +874,12 @@ Media queries
       height: 40px;
       font-size: 15px;
   }
-  .card{
-    max-width: 100%;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    .card{
+      max-width: 100%;
+      margin-bottom: 5px;
+      margin-top: 5px;
   }
-
+ 
   .form, input[type=textarea] {
     width: 100%;
     margin-top: 0;
@@ -956,12 +957,9 @@ Media queries
       width: 95px;
       max-width: 100%;
     }
-    .Contactinfo{
-      margin: 0 auto;
-      text-align: center;
-    }
     .wp-block-gallery{
       flex-direction: column;
+      max-width: 100%;
     }
   }
 
