@@ -5,7 +5,7 @@ function filterPosts(){
     let filterValue = searchBar.value.toLowerCase();
     // console.log(filterValue);
 
-    const searchPosts = document.querySelectorAll(".posts").forEach(post => {
+    const searchPosts = document.querySelectorAll(".blogpost").forEach(post => {
        post.innerText.toLowerCase().indexOf(filterValue) > -1
         ? post.style.display = "" : post.style.display = "none";
     })
