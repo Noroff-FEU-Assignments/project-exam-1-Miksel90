@@ -46,6 +46,16 @@
       </section>
       <section>
           <h1>Blog Posts</h1>
+          <div class="filtering">
+            <label for="searchbar" class="hide-this-label">Search</label>
+            <input id="searchbar" class="searchbar" type="text" name="searchbar" placeholder="Search..">
+            <label for="sortSelect" class="filter"></label>
+            <select id="sortSelect" class="filter-blog">Filter
+                <option value="date">Date</option>
+                <option value="popularity">Most viewed</option>
+                <option value="title">Title</option>
+              </select>
+          </div>
           <div class="container-blogs">
               <div class="blog-images"></div>
           </div>

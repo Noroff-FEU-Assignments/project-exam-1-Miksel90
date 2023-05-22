@@ -522,8 +522,6 @@ form {
 }
 
 input {
-  border-color: #000;
-  border-style: outset;
   width: 400px;
   max-width: 100%;
   margin-top: 2px;
@@ -757,7 +755,7 @@ Contact
 input[type=text], select, textarea, aria-label {
   font-family: "Quicksand";
   width: 400px;
-  padding: 20px;
+  padding: 15px;
   border: 2px solid #000000;
   border-radius: 10px;
   box-sizing: border-box;
@@ -841,9 +839,22 @@ background-size: cover;
 filter
 ================*/
 
+.filtering{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  gap: 5px;
+  padding: 10px;
+}
 
+.hide-this-label{
+  display: none;
+}
 
-
+.filter-blog{
+  width: 200px;
+}
 /*==============
 Media queries
 ================*/
@@ -896,6 +907,9 @@ Media queries
     width: 100%;
     margin-top: 0;
   } 
+  .searchbar{
+    display: none;
+  }
 
   .tip-button {
     padding:20px;
