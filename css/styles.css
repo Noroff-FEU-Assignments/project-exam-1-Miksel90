@@ -877,19 +877,19 @@ Media queries
 }
   
   @media (max-width: 600px) {
-    .subscribe-text{
-      top:10px;
-      font-size: 20px;
-    }
-    .sub-button{
-      width: 100px;
-      height: 40px;
-      font-size: 15px;
+  .subscribe-text{
+    top:10px;
+    font-size: 20px;
   }
-    .card{
-      max-width: 100%;
-      margin-bottom: 5px;
-      margin-top: 5px;
+  .sub-button{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .card{
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
  
   .form, input[type=textarea] {
@@ -901,8 +901,11 @@ Media queries
     padding:20px;
     right: 20px;
   }
-    }
-  
+
+  .posts img{
+    width: 90%;
+}
+}
 
 
 @media screen and (max-width: 756px) {
