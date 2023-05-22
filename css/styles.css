@@ -21,14 +21,16 @@ em{
   font-size: 20px;
 }
 
-p{
-  margin-bottom: 1em;
+p {
   text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 html, body {
@@ -830,6 +832,15 @@ background-size: cover;
   padding: 20px;
   border-radius: 5px;
 }
+
+
+/* Level two process */
+
+/*==============
+filter
+================*/
+
+
 
 
 /*==============
