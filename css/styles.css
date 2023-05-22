@@ -852,8 +852,24 @@ filter
   display: none;
 }
 
+#searchbar{
+  border-width: 3px;
+  border-color:#000;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  width: 30%;
+  padding: 7px;
+}
+
+#searchbar:focus {
+  outline: none;
+}
+
 .filter-blog{
   width: 200px;
+  border: none;
 }
 /*==============
 Media queries
