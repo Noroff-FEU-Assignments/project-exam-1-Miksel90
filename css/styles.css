@@ -59,7 +59,7 @@ h1,h2{
 }
 
 img{
-width: 100%;
+max-width: 100%;
 }
 
 
@@ -290,6 +290,7 @@ Carousel
 
 .posts img{
   width: 100%;
+  max-width: 100%;
   height: 200px;
   object-fit: cover;
   margin-top: auto;
