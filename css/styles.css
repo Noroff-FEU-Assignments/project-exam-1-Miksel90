@@ -872,6 +872,10 @@ filter
   width: 200px;
   border: none;
 }
+
+.filter-blog:focus{
+  outline: none;
+}
 /*==============
 Media queries
 ================*/
