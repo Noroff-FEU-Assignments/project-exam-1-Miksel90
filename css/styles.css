@@ -865,6 +865,7 @@ filter
 
 #searchbar:focus {
   outline: none;
+  border-bottom: 4px solid darkgreen;
 }
 
 .filter-blog{
