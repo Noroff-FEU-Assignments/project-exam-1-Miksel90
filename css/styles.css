@@ -848,7 +848,7 @@ filter
   padding: 10px;
 }
 
-.hide-this-label{
+.hide-this-label,.filter {
   display: none;
 }
 
