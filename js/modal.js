@@ -10,6 +10,8 @@ function createModal(){
       image.addEventListener("click", function() {
         modal.style.display = "block";
         modalImage.src = this.src;
+        modalImage.alt = this.alt;
+
       });
     });
   
@@ -24,12 +26,7 @@ function createModal(){
     });
   }
   
-//   const modal = document.querySelector("#modal")
-//   const testknapp = document.querySelector(".test")
-//   testknapp.addEventListener("click", function(){
-//     modal.showModal()
-//   })
-  
+
 
   export default createModal;
 

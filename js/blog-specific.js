@@ -68,12 +68,12 @@ function modalFunc() {
   const images = document.querySelectorAll("img");
   const modal = document.querySelector("dialog");
   const modalImg = document.querySelector(".modal-img");
-  const closeButton = document.querySelector(".exit-modal");
 
   images.forEach(function(image) {
     image.addEventListener("click", function() {
       modal.showModal();
       modalImg.src = this.src;
+      modalImg.alt = this.alt;
     });
   });
 
@@ -81,10 +81,6 @@ function modalFunc() {
     if (event.target === modal) {
       modal.close();
     }
-  });
-
-  closeButton.addEventListener("click", function() {
-    modal.close();
   });
 }
 
