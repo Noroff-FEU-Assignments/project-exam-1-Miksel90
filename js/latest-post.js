@@ -90,6 +90,7 @@ if ((latestPosts.length -1) == i){
 const carouselPages = 0;
 var carouselPage = 0;
 
+//setting up carousel, timer for the loader to show
 function setUpCarousel(){
   setTimeout(() => {
     const container = document.querySelector(".latest-container");
@@ -102,7 +103,7 @@ function setUpCarousel(){
   }, 100);
 }
 
-//
+//What posts are shown/hidden when you click next
 function next(){
   carouselPage++;
   const container = document.querySelector(".latest-container");
@@ -123,6 +124,7 @@ function next(){
   }
 }
 
+//disable button on last page
 function handleNextButton(){
 const btn = document.querySelector(".next")
 console.log(next);
@@ -133,6 +135,7 @@ if (carouselPage === 2 ){
 }
 }
 
+// What posts are shown/hidden when you click next
 function prev(){
 carouselPage--;
 const container = document.querySelector(".latest-container")
@@ -148,6 +151,8 @@ for (let i = 0; i < container.children.length; i++) {
   } 
 }
 }
+
+//Disable button on first page
 function handlePrevButton(){
 const btn = document.querySelector(".prev")
 if (carouselPage === 0 ){
@@ -157,6 +162,7 @@ if (carouselPage === 0 ){
 }
 }
 
+//putting functions into one function
 async function main() {
   const latestPosts = await getLatestPost();
   createPostsHTML(latestPosts);
