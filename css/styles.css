@@ -848,7 +848,7 @@ filter
   padding: 10px;
 }
 
-.hide-this-label,.filter {
+.hide-this-label {
   display: none;
 }
 
@@ -988,15 +988,15 @@ Media queries
       order: 3;
     }
     .hamburger.clicked ~ .menu {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-end;
-    width: 25%;
-    padding-top: 20px;
-    position: absolute;
-    top: 60px;
-    right: -90px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-end;
+      width: 25%;
+      padding-top: 20px;
+      position: absolute;
+      top: 60px;
+      right: -90px; 
     }
   
     .menu a {
@@ -1011,7 +1011,7 @@ Media queries
       flex-direction: column;
       max-width: 100%;
     }
-  }
+}
 
 
 
@@ -1030,11 +1030,10 @@ Media queries
     height: 400px;
     width: 90%;
   }
-  }
+}
 
-  @media only screen and (max-device-width: 1366px) {
-    .tip-background,.about-background{
-      background-attachment: scroll;
-    }
-    
+@media only screen and (max-device-width: 1366px) {
+  .tip-background,.about-background{
+    background-attachment: scroll;
   }
+}
