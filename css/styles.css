@@ -992,11 +992,11 @@ Media queries
       flex-direction: column;
       text-align: left;
       align-items: flex-end;
-      width: 25%;
+      width: 40%;
       padding-top: 20px;
       position: absolute;
       top: 60px;
-      right: -90px; 
+      right: -100px; 
     }
   
     .menu a {
