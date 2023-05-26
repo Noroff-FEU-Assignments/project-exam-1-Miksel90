@@ -104,6 +104,7 @@ function setUpCarousel(){
 }
 
 
+// Setting up click events
 const prevBtn = document.querySelector(".prev");
 prevBtn.addEventListener("click", prev);
 
