@@ -103,6 +103,15 @@ function setUpCarousel(){
   }, 100);
 }
 
+
+const prevBtn = document.querySelector(".prev");
+prevBtn.addEventListener("click", prev);
+
+const nextBtn = document.querySelector(".next");
+nextBtn.addEventListener("click", next);
+
+
+
 //What posts are shown/hidden when you click next
 function next(){
   carouselPage++;
