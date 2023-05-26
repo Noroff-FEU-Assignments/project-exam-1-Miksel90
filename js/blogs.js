@@ -67,7 +67,7 @@ async function main() {
     }
   }
 
-  // Show more posts
+  // Show more/less posts
   async function showMorePosts() {
     const latestPosts = await getLatestPost();
     const startIndex = displayedPosts;
