@@ -294,6 +294,7 @@ Carousel
   height: 200px;
   object-fit: cover;
   margin-top: auto;
+  border-radius: 5px;
 }
 
 .carousel-nav {
