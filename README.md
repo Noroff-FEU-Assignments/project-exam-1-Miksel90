@@ -1,6 +1,8 @@
 # Project Exam 1: Bogeys & Bunkers
 
+<div
 ![readme-img](https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90/assets/114400071/4f737dd9-dae1-4244-8dda-1d0924b5b2b3)
+</div>
 
 End of year 1 exam at Noroff. The task was to build a blog that fetched content from Wordpress and built the pages dynamically. This was my first project were we could use javascript from the begining. 
 
