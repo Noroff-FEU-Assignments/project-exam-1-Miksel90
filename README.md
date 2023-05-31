@@ -1,19 +1,20 @@
 # Project Exam 1: Bogeys & Bunkers
 
-<img src="images/RainyDays_Logo.png" alt="Rainydays logo">
+![readme-img](https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90/assets/114400071/4f737dd9-dae1-4244-8dda-1d0924b5b2b3)
 
-My first project which we built over our first year at Noroff. The project was to build a website for a brand that wanted to sell jackets for young men and woman that enjoyed doing activetites outside.
+End of year 1 exam at Noroff. The task was to build a blog that fetched content from Wordpress and built the pages dynamically. This was my first project were we could use javascript from the begining. 
+
 
 ## Description
 
-This is my first ever project working with coding. The project went over two semesters and I built and rebuilt it as my knowledge of coding improved. In the begining we were only alowed to use HTML and CSS, so the JS has been added over the last couple of months. The project was to create a homepage for company selling jackets targeting young peolpe that enjoyed doing activeties outside regardless of weather.
+This was my end of year one exam at Noroff. We had four weeks to create a blog site of our choice. We were to use all our knowledge in UX Design, HTML, CSS, JS, CMD & SEO. We were not allowed to use any frameworks or libraries. The content had to be fetched by making an API call to Wordpress and our blog specific pages had to be dynamically built. Our index page had to have an image carousel which showcased the latest blog posts. The images on the blog specific pages had to have a modal functionality. 
 
-The page is not yet finished as of june 2023, but i will continue to work on it until i think is finished.
+If we were finished with the level 1 process we could advance into level two, which was to add a search and filtering function to the blog post page and to add a functional comment section. I only had time to get started on the filtering. 
 
-Things im working on:
-
-- A functionable shopping cart
-- A detailed product specific page with working button and image modals
+Things I want to add:
+- functional comment section
+- correct filtering
+- Shopping site for merch
 
 ## Built With
 
@@ -25,10 +26,8 @@ Things im working on:
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
-   https://github.com/Noroff-FEU-Assignments/cross-course-project-Miksel90.git
+- https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90.git
 
 ### Running
 
@@ -39,8 +38,6 @@ It does not require anything to get started. Its a simple website.
 Simply open a pull request so code can be reviewed.
 
 ## Contact
-
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
 Facebook
 
@@ -56,4 +53,4 @@ My LinkedIn page
 
 ## Acknowledgments
 
-I would like to thank my friend Mats Øverland for his patience in teaching me simple css
+I would like to thank my friend Mats Øverland for his patience in teaching me simple css and for helping me with getting the carousel to work properly. 
