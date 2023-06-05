@@ -8,7 +8,17 @@ End of year 1 exam at Noroff. The task was to build a blog that fetched content 
 
 ## Description
 
-This was my end of year one exam at Noroff. We had four weeks to create a blog site of our choice. We were to use all our knowledge in UX Design, HTML, CSS, JS, CMD & SEO. We were not allowed to use any frameworks or libraries. The content had to be fetched by making an API call to Wordpress and our blog specific pages had to be dynamically built. Our index page had to have an image carousel which showcased the latest blog posts. The images on the blog specific pages had to have a modal functionality. 
+This was my end of year one exam at Noroff. We had four weeks to create a blog site of our choice. We were to use all our knowledge in UX Design, HTML, CSS, JS, CMD & SEO. We were not allowed to use any frameworks or libraries. The content had to be fetched by making an API call to Wordpress site that we hosted.
+
+Our blog had to include this: 
+- Index page
+  -   Had to include a latest post section with a built in image-carousel
+- Blog page
+  - Blog page whihch showed 10 blog posts and when you clicked a button it showed all blogs
+- Blog specific page
+  - All blogs pages had to be dyamically built and all images on the page should have Modal functionality. 
+- Contact page
+  - Had to include validation and sent confirmation on all text fields.       
 
 If we were finished with the level 1 process we could advance into level two, which was to add a search and filtering function to the blog post page and to add a functional comment section. I only had time to get started on the filtering. 
 
@@ -23,9 +33,9 @@ Things I want to add:
 - CSS
 - JavaScript
 
-## Getting Started
-
 ### Installing
+
+This is a simple website for school. You can simply clone the repo and have a look around. 
 
 1. Clone the repo:
 - https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90.git
@@ -43,10 +53,6 @@ Simply open a pull request so code can be reviewed.
 Facebook
 
 - Mikael Selstad
-
-Instagram
-
-- @MikaBjrk
 
 My LinkedIn page
 
