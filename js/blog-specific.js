@@ -1,3 +1,24 @@
+// Define modalFunc at the top
+function modalFunc() {
+  const images = document.querySelectorAll("img");
+  const modal = document.querySelector("dialog");
+  const modalImg = document.querySelector(".modal-img");
+
+  images.forEach(function (image) {
+    image.addEventListener("click", function () {
+      modal.showModal();
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
+  });
+
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.close();
+    }
+  });
+}
+
 // Base URL
 const apiBase = "https://www.mikaelselstad.no";
 const jsonBase = "/wp-json/wp/v2";
@@ -9,7 +30,11 @@ const urlParams = new URLSearchParams(queryString);
 const postId = urlParams.get("id");
 
 // Full URL
-const fullPostURL = apiBase + jsonBase + postEndpoint + `/${postId}?_embed&fields=id,title,content,date&_embed`;
+const fullPostURL =
+  apiBase +
+  jsonBase +
+  postEndpoint +
+  `/${postId}?_embed&fields=id,title,content,date&_embed`;
 
 // Fetch single post
 async function singleBlogPost() {
@@ -57,32 +82,3 @@ async function main() {
 
 // Run the entire function
 main();
-
-
-
-//Creating the modal from the images
-const modalImg = document.querySelector('.modal-img')
-const modal = document.querySelector('.modal')
-
-function modalFunc() {
-  const images = document.querySelectorAll("img");
-  const modal = document.querySelector("dialog");
-  const modalImg = document.querySelector(".modal-img");
-
-  images.forEach(function(image) {
-    image.addEventListener("click", function() {
-      modal.showModal();
-      modalImg.src = this.src;
-      modalImg.alt = this.alt;
-    });
-  });
-
-  modal.addEventListener("click", function(event) {
-    if (event.target === modal) {
-      modal.close();
-    }
-  });
-}
-
-
-
