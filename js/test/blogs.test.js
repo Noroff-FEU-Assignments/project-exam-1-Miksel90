@@ -1,4 +1,4 @@
-const { getLatestPost } = require("./js/test/blogs.test,js"); // Replace with your actual file name
+const { getLatestPost } = require("../test/blogs.test.js");
 
 describe("getLatestPost", () => {
   it("should fetch and return an array of posts", async () => {
