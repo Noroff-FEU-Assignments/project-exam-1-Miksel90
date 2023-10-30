@@ -10,6 +10,7 @@ const subjectError = document.querySelector("#subjectError");
 const textArea = document.querySelector("#textArea");
 const textAreaError = document.querySelector("#textAreaError");
 const button = document.querySelector(".sub-button");
+const messageValid = document.querySelector("#messageValid");
 
 // Function to enable/disable the button
 function updateButtonState() {
@@ -86,7 +87,7 @@ textArea.addEventListener("keyup", updateButtonState);
 form.addEventListener("submit", submitForm);
 
 // Helper function to check input length
-export function checkLength(value, len) {
+function checkLength(value, len) {
   return value.trim().length >= len;
 }
 
