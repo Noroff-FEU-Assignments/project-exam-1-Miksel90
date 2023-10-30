@@ -1,0 +1,22 @@
+{
+  "name": "unit-testing",
+  "version": "0.0.1",
+  "description": "unit testing on previous work",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90.git"
+  },
+  "keywords": [
+    "unittesting"
+  ],
+  "author": "Miksel90",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90/issues"
+  },
+  "homepage": "https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90#readme"
+}
