@@ -11,7 +11,7 @@ let displayedPosts = 10;
 const numBlogsToShow = 10;
 
 // Fetching the posts
-async function getLatestPost() {
+export async function getLatestPost() {
   const allPosts = [];
 
   let page = 1;
@@ -50,7 +50,7 @@ function createPostHTML(latestPost) {
       const featuredImage = featuredMedia[0];
       const image = document.createElement("img");
       image.src = featuredImage.source_url;
-          image.alt = featuredImage.alt_text || latestPost.title.rendered;
+      image.alt = featuredImage.alt_text || latestPost.title.rendered;
       productContainer.append(image);
     }
   }
@@ -61,7 +61,11 @@ function createPostHTML(latestPost) {
 // Setting up main function
 async function main() {
   function createPostsHTML(latestPosts, startIndex, numPosts) {
-    for (let i = startIndex; i < startIndex + numPosts && i < latestPosts.length; i++) {
+    for (
+      let i = startIndex;
+      i < startIndex + numPosts && i < latestPosts.length;
+      i++
+    ) {
       const latestPost = latestPosts[i];
       createPostHTML(latestPost);
     }
@@ -91,4 +95,3 @@ async function main() {
 
 // Run the entire function
 main();
-
