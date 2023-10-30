@@ -1,6 +1,6 @@
 let topbutton = document.getElementById("backToTopBtn");
 
-window.onscroll = function() {
+window.onscroll = function () {
   scrollFunction();
 };
 
