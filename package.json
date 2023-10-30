@@ -4,7 +4,8 @@
   "description": "unit testing on previous work",
   "main": "js/index.js",
   "scripts": {
-    "test": "test"
+    "test": "npm run test-unit",
+    "test-unit": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90/issues"
   },
-  "homepage": "https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90#readme"
+  "homepage": "https://github.com/Noroff-FEU-Assignments/project-exam-1-Miksel90#readme",
+  "devDependencies": {
+    "jest": "^29.2.0"
+  }
 }
